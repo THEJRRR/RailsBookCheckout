@@ -7,9 +7,10 @@ RSpec.describe "books/show", :type => :view do
       :title => "Title",
       :status => "Status",
       :isbn => "Isbn",
-      :rating => 1,
       :active => false
     ))
+    @book_review = BookReview.new book: @book
+    @book_reviews = @book.book_reviews
   end
 
   it "renders attributes in <p>" do
@@ -18,7 +19,6 @@ RSpec.describe "books/show", :type => :view do
     expect(rendered).to match(/Title/)
     expect(rendered).to match(/Status/)
     expect(rendered).to match(/Isbn/)
-    expect(rendered).to match(/1/)
     expect(rendered).to match(/false/)
   end
 end

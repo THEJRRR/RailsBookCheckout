@@ -49,7 +49,6 @@ Book.create!( author: 'Stephen Baxter',
               isbn: '0061059048',
               active: true,
               approved_at: Time.now
-
 )
 
 Rating.create!(user: normie,

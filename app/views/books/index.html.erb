@@ -4,12 +4,11 @@
 <table style="width:100%">
   <thead>
     <tr>
-      <th>Author</th>
-      <th>Title</th>
-      <th>Status</th>
-      <th>ISBN</th>
-      <th>Rating</th>
-      <th>Active</th>
+      <th><%= link_to "Author", books_path(:column => "author", :order => search_sort_by[:order]) %></th>
+      <th><%= link_to "Title", books_path(:column => "title", :order => search_sort_by[:order]) %></th>
+      <th><%= link_to "Status", books_path(:column => "status", :order => search_sort_by[:order]) %></th>
+      <th><%= link_to "ISBN", books_path(:column => "isbn", :order => search_sort_by[:order]) %></th>
+      <th><%= link_to "Rating", books_path(:column => "rating", :order => search_sort_by[:order]) %></th>
       <th>Approved at</th>
       <th>Actions</th>
     </tr>
@@ -31,7 +30,7 @@
       <script>
         $('#star_<%= book.id %>').raty({
               readOnly: true,
-              start: <%= book.average_rating %>,
+              start: <%= book.rating %>,
               path: '/assets'
           });
       </script>

@@ -1,27 +1,27 @@
-== README
+== Rails Book Checkout
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+To set up this app on heroku...
 
-Things you may want to cover:
+=== System dependencies
+* Ruby 2.1.1, Rails 4.0
 
-* Ruby version
+=== Configuration
+clone and run bundle install
 
-* System dependencies
+=== Services setup
+* You will need mandrill and cloudinary accounts
+* To set up cloudinary, you will need to set up a config/cloudinary.yml file
+* To set up mandrill, you will need a mandrill API key. But the API key into Figaro's config/application.yml file
 
-* Configuration
+===Database setup
+* just run rake db:create, rake db:migrate
 
-* Database creation
+=== Test suite
+* We use rspec and cucumber, just run rake spec or rake cucumber
 
-* Database initialization
+=== Deployment
+* It is easy to get up and running on heroku.
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
 
 
 Please feel free to use a different markup language if you do not plan to run

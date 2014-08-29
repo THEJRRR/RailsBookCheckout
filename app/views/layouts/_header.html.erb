@@ -30,7 +30,14 @@
               </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
+
               <% if user_signed_in? %>
+                <li style="padding-top:15px; padding-right:10px"><%= form_tag books_path, :method => :get do %>
+
+                      <%= text_field_tag :q, params[:q] %>
+                      <%= submit_tag "Search", :name => nil %>
+
+                  <% end %></li>
                 <li style="font-weight: bold; padding-top:15px"><%= current_user.email %></li>
                 <li><%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %></li>
                 <li><%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %></li>

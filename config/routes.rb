@@ -5,6 +5,8 @@ Rails.application.routes.draw do
 
   root to: 'home#index'
 
+  get 'books/search', to: 'books#index'
+
   resources :books
 
   resources :ratings

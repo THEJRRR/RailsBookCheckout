@@ -16,6 +16,7 @@
 /tmp
 
 .idea/*
+solr/test
 
 # Ignore all API keys
 /config/cloudinary.yml
